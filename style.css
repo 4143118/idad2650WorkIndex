@@ -1,15 +1,15 @@
-/*!!!!!*/
-/*add in your own font imports here*/
-/*remember to update them in the rest of the CSS : eg the body selector*/
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/*Font license*/
+/*Copyright 2022 The Menbere Project Authors (https://github.com/SorkinType/Menbere/)
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org
 
-/*!!!!!*/
-/*change out, and/or add colours to the colour scheme*/
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007*/
+@import url('https://fonts.googleapis.com/css2?family=Menbere:wght@100..700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+
 :root{
     /* basic 2-bit palette from 1bit Monitor Glow Palette by Polyducks */
     /* https://lospec.com/palette-list/1bit-monitor-glow */
-    --colour-1: #222323;
-    --colour-2: #f0f6f0;
+    --colour-1: #161627;
+    --colour-2: #fffbef;
 }
 
 /* this swaps the colour order to account for user's OS dark mode */
@@ -26,7 +26,7 @@
 body {
     background-color: var(--colour-2);
     color: var(--colour-1);
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Menbere', sans-serif;
     line-height: 1.5;
     padding: 1rem;
     display: flex;
@@ -59,7 +59,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    flex: 1;
 }
 
 /*Align the text and images, and reduce the size of the images*/
@@ -82,9 +82,9 @@ aside {
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    margin-block-start: 3rem;
+        display: flex;
+        justify-content: center;
+        margin-block-start: 0.1rem;
 }
 
 /*technique from Kevin Powell*/
