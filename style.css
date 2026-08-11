@@ -59,6 +59,21 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+/*Align the text and images, and reduce the size of the images*/
+section {
+    width: 100%;
+    max-width: 800px;
+}
+
+.example {
+    display: block;
+    width: 80%;
+    max-width: 650px;
+    height: auto;
+    margin: 1rem auto;
 }
 
 aside {
