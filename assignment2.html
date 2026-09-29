@@ -38,6 +38,9 @@
     <main>
 
         <section id="scenario-section">
+            <p>At this stage, I have not added written instructions to the prototypes. This allows testers to focus on
+                the visual cues and interactions provided by each version, and show me what they can understand without
+                additional guidance.</p>
             <h3>Information Design and Learnability of the Pencils</h3>
             <p>
                 My first area of exploration is how Pencil Jam helps children recognise that the pencils are interactive.
@@ -50,16 +53,57 @@
                 and whether it encourages them to try dragging the pencil.
             </p>
 
-            <h4>Prototype A1: Slight Lift</h4>
+            <h4><a href="https://nora-exploration-one.github.io/a1HoverLift/" target="_blank">
+                Prototype A1: Slight Lift</a></h4>
+
+            <details>
+                <summary>A1 – Git Commit List</summary>
+                <ul>
+                    <li>
+                        <strong>Simple css lift effect</strong><br>
+                        29 Sep 2026, 15:39:23 · 4143118<br>
+                        just add a simple select effect
+                    </li>
+                    <li>
+                        <strong>hover effect (drop effect)</strong><br>
+                        29 Sep 2026, 15:42:18 · 4143118
+                    </li>
+                </ul>
+            </details>
+
             <p>When hovered over, the pencil lifts slightly. This movement is intended to make it feel as though the pencil
                 is waiting to be picked up. I want to find out whether this physical cue makes children more likely to
                 think of dragging it.</p>
 
-            <h4>Prototype A2: White Highlight</h4>
+            <h4><a href="https://nora-expolration-two.github.io/whiteHighlight/" target="_blank">
+                Prototype A2: White Highlight</a></h4>
+
+            <details>
+                <summary>A2 Commit Log</summary>
+                <ul>
+                    <li>
+                        <strong>add a simple highlight effect</strong><br>
+                        4143118 · 29 Sep 2026, 15:55:48
+                    </li>
+                </ul>
+            </details>
+
             <p>When hovered over, a white outline appears around the pencil to highlight it. I want to find out whether
                 children understand this highlight as a sign that the pencil is interactive and can be used to make sound.</p>
 
-            <h4>Prototype A3: Slight Lift & White Highlight</h4>
+            <h4><a href="https://nora-exploration-three.github.io/a3HoverLiftWithHighlight/" target="_blank">
+                Prototype A3: Slight Lift & White Highlight</a></h4>
+
+            <details>
+                <summary>A3 Commit Log</summary>
+                <ul>
+                    <li><strong>hover lift effect</strong><br>4143118 · 29 Sep 2026, 15:57:19</li>
+                    <li><strong>add highlight</strong><br>4143118 · 29 Sep 2026, 16:00:56</li>
+                    <li><strong>dot css</strong><br>4143118 · 29 Sep 2026, 23:04:55</li>
+                    <li><strong>I found out I me mix up a3 and b3</strong><br>4143118 · 29 Sep 2026, 23:07:20</li>
+                </ul>
+            </details>
+
             <p>When hovered over, the pencil lifts slightly and is surrounded by a white outline. I want to find out whether
                 combining the two visual cues makes the pencil easier to notice, or whether the feedback becomes too much.</p>
         </section>
@@ -78,17 +122,54 @@
                 interaction method itself.
             </p>
 
-            <h4>Prototype B1: Immediate Speed Change</h4>
+            <h4><a href="https://nora-exploration-four.github.io/b1Immediately/" target="_blank">
+                Prototype B1: Immediate Speed Change</a></h4>
+
+            <details>
+                <summary>B1 Commit Log</summary>
+                <ul>
+                    <li><strong>part of b1</strong><br>4143118 · 29 Sep 2026, 16:39:07</li>
+                    <li><strong>map ruler mouse position to speed</strong><br>4143118 · 29 Sep 2026, 17:03:07</li>
+                    <li><strong>create a dot in css</strong><br>4143118 · 29 Sep 2026, 17:15:12</li>
+                    <li><strong>debugging</strong><br>4143118 · 29 Sep 2026, 22:15:06</li>
+                </ul>
+            </details>
+
             <p>As the cursor moves across the ruler, the music’s speed changes immediately. Children can move between
                 positions and hear the corresponding effect. I want to find out whether this immediate feedback helps
                 them connect their movement with the change in sound.</p>
 
-            <h4>Prototype B2: Drag to Set the Speed</h4>
+            <h4><a href="https://nora-oragnization-five.github.io/b2DragToSet/" target="_blank">
+                Prototype B2: Drag to Set the Speed</a></h4>
+
+            <details>
+                <summary>B2 Commit Log</summary>
+                <ul>
+                    <li><strong>prepare sound loop and set speed when drag ends</strong><br>4143118 · 29 Sep 2026, 21:55:41</li>
+                    <li><strong>dot css</strong><br>4143118 · 29 Sep 2026, 21:59:08</li>
+                    <li><strong>debugging</strong><br>4143118 · 29 Sep 2026, 22:06:44</li>
+                </ul>
+            </details>
+
             <p>Children drag along the ruler to choose a speed. When they release the mouse, the music continues playing
                 at the selected speed. Dragging makes changing the speed a deliberate action. I want to find out whether
                 this method gives children a clearer sense that they are choosing and setting the speed.</p>
 
-            <h4>Prototype B3: Hover to Preview, Click to Confirm</h4>
+            <h4><a href="https://nora-organization-six.github.io/b3/" target="_blank">
+                Prototype B3: Hover to Preview, Click to Confirm</a></h4>
+            <details>
+                <summary><strong>B3 – Git Commit List</strong></summary>
+
+                <ul>
+                    <li><strong>dot css</strong> — 29 Sep 2026, 22:33:42 · 4143118</li>
+                    <li><strong>Prepare audio loop for tempo changes</strong> — 29 Sep 2026, 23:26:54 · 4143118</li>
+                    <li><strong>Add ruler hover preview and click to save speed</strong> — 29 Sep 2026, 23:54:27 · 4143118</li>
+                    <li><strong>css</strong> — 30 Sep 2026, 00:14:00 · 4143118</li>
+                    <li><strong>debug: Spell mistakes</strong> — 30 Sep 2026, 00:17:42 · 4143118</li>
+                    <li><strong>iterate css</strong> — 30 Sep 2026, 00:26:54 · 4143118</li>
+                </ul>
+            </details>
+
             <p>When the cursor hovers over a section of the ruler, children can preview the corresponding speed. They
                 click to confirm their choice. This gives them a chance to hear an option before deciding. I want to
                 explore whether separating preview from confirmation helps children understand the three speed settings,

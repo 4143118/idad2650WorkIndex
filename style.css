@@ -22,6 +22,9 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007*/
     }
 }
 
+details summary {
+    font-weight: bold;
+}
 
 body {
     background-color: var(--colour-2);
