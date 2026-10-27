@@ -24,6 +24,7 @@
         <h1>Nora's Interface Design and Development Work</h1>
     </header>
 
+
     <div class="mainNavContainer">
 
         <nav>
@@ -32,9 +33,288 @@
         </nav>
 
         <main>
-            <section id="intro-section">
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto asperiores deleniti, dolore, fugiat harum ipsum magni natus nemo nobis quos, totam veniam. Assumenda eaque labore minus praesentium quidem sapiente?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto asperiores deleniti, dolore, fugiat harum ipsum magni natus nemo nobis quos, totam veniam. Assumenda eaque labore minus praesentium quidem sapiente?</p>
+            <img class="example" src="assets/project1.png" alt="project1">
+            <h2>Pencil Jam</h2>
+            <h5><a href="https://4143118.github.io/pencilJam/" target="_blank">Link to My Project</a></h5>
+            <section>
+                <h3>Brief Synopsis</h3>
+                <p>Pencil Jam is a browser-based interactive musical instrument that transforms a pencil case into a
+                    playful digital music-making tool. Users can drag pencils of different colors into sequencer slots
+                    to create musical rhythms, adjust the volume by changing the length of the pencils, control playback
+                    speed using a ruler, and edit their musical creations with an eraser. By turning familiar stationery
+                    into interactive musical controls, Pencil Jam encourages toddlers to explore sounds and create music
+                    through visual and hands-on interaction.
+                </p>
             </section>
+
+            <hr style="border: 0; border-top: 2px solid #999; width: 100%; margin: 30px 0;">
+
+            <section>
+                <h3>Scenario: Musical Toy for Toddlers</h3>
+                <p>Design a way for young children with minimal language skills to explore music.</p>
+                <p>Browser based musical instruments offer users the ability to dynamically perform music and explore
+                    complex audio design. While these interactions allow for a depth of control, they can be intimidating
+                    for many adult users, let alone you children whose language skills are still developing.
+                </p>
+            </section>
+
+            <section>
+                <h3>Responses</h3>
+                <p>Pencil Jam responds to the goal of this scenario by simplifying music creation for toddlers with
+                    developing language skills. Instead of relying on written instructions or complex musical controls,
+                    the game uses familiar stationery and direct mouse interactions to make music exploration more intuitive.
+                    Dragging and dropping pencils allows children to experiment with different sound combinations, while
+                    the ruler and eraser provide simple ways to modify their music. Visual feedback helps children
+                    understand the connection between their actions and the sounds they hear, encouraging independent
+                    exploration and creative play.</p>
+            </section>
+
+            <hr style="border: 0; border-top: 2px solid #999; width: 100%; margin: 30px 0;">
+
+            <section>
+                <h3>Core Interactive Features and Design System</h3>
+                <h4>1. Pencil Sequencer</h4>
+                <img class="example" src="assets/grid.png" alt="grid">
+                <p>Users can drag different colored pencils into a 3 × 6 music grid to create looping melodies. The three
+                    rows represent different pitches, and the sounds are generated using JavaScript, including drum-like
+                    and synthesized sounds. Clicking a pencil changes its length: longer pencils produce louder sounds,
+                    while shorter pencils produce quieter sounds.
+                </p>
+                <p>
+                    Initially, I considered using pre-recorded sound effects, but during development, I found that the
+                    synthesized sounds reminded me of tapping pencils on a desk to create rhythms. I decided to keep these
+                    sounds because they fit the stationery theme and make music creation feel more playful. Using pencil
+                    length to represent volume also helps young children understand changes in sound without relying on
+                    numerical controls.
+                </p>
+
+                <h4>2. Ruler Speed Control & Spatial Input</h4>
+                <img class="example" src="assets/ruler.png" alt="ruler">
+                <p>
+                    Users drag the ruler horizontally to adjust playback speed. Moving left slows the music down, while
+                    moving right makes it faster. The new speed is applied when the mouse is released. This feature
+                    implements Spatial Input by mapping the mouse's horizontal position to the time interval between notes.
+                </p>
+                <p>
+                    I chose a ruler to maintain the stationery theme, while the turtle and rabbit icons visually represent
+                    slow and fast speeds without requiring children to understand numerical settings. After user testing,
+                    I chose dragging as the interaction method because it feels more natural and resembles physically
+                    moving a ruler.
+                </p>
+
+                <h4>3. Eraser & Playback Controls</h4>
+                <img class="example" src="assets/eraser.png" alt="eraser">
+                <p>
+                    Users can drag the eraser onto the music grid to remove pencils and modify their melodies. The playback
+                    button allows them to pause the music and restart it from the first column.
+                </p>
+                <p>
+                    I chose an eraser instead of a delete button to maintain the stationery theme and create an intuitive
+                    mapping between the familiar action of erasing and removing a sound. The playback control allows children
+                    to pause and listen to their creations again, encouraging them to experiment with different musical
+                    combinations.
+                </p>
+
+                <h4>4. Visual & Audio Feedback</h4>
+                <img class="example" src="assets/pencil case.png" alt="pencil case">
+                <p>
+                    Pencils and the eraser lift slightly and become highlighted when hovered over. During playback, the
+                    music grid highlights each column in sequence. The game also provides short voice prompts and encouragement
+                    to guide children through the experience.
+                </p>
+                <p>
+                    The hover feedback finally decided to be added after user testing to make interactive objects easier
+                    to recognize. Voice guidance, however, was part of my original design plan because the target users
+                    are still developing their reading skills. Since I could not find a suitable free voice-over tool,
+                    I used code-generated speech instead. Together, these feedback mechanisms reduce reliance on written
+                    instructions and encourage children to keep exploring.
+                </p>
+
+                <h4>5. Design System</h4>
+                <p>
+                    Pencil Jam is designed around a familiar children's desk environment, using a wooden desktop, a pink
+                    pencil case, colorful stationery and playful illustrations to create a warm atmosphere. The pencil case
+                    is positioned at the top, the ruler in the middle and the music grid at the bottom, creating a clear
+                    flow between selecting tools, adjusting speed and composing music.
+                </p>
+                <p>
+                    I chose this visual approach to make music creation feel familiar rather than presenting children with
+                    a complex electronic instrument. Everyday stationery serves both a visual and functional purpose, helping
+                    children understand the controls through objects and actions they already recognize.
+                </p>
+
+                <h4>6. Responsive & Adaptive Design</h4>
+                <p>
+                    This project uses CSS Media Queries to adapt to four screen-width categories: Medium, Expanded, Large
+                    and Extra-large. I tested the interface in Chrome and Firefox, adjusting the sizes and positions of
+                    the pencil case, ruler, music grid and decorative elements across different viewport widths.
+                    During testing, I encountered issues such as overlapping elements, unbalanced proportions and unclear
+                    interaction areas. I refined the layouts at different breakpoints to address these problems. In
+                    the end, all were successfully resolved.
+                </p>
+
+            </section>
+
+            <hr style="border: 0; border-top: 2px solid #999; width: 100%; margin: 30px 0;">
+
+            <details class="commit-log">
+                <summary>Final Instrument Commit Log</summary>
+
+                <ul class="commit-list">
+                    <li>
+                        <strong>Main branch with comment</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 15:24:57 (+1000)</span>
+                        <p>Iterate and debugging A LOT</p>
+                    </li>
+
+                    <li>
+                        <strong>hover lift effect</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 15:57:19 (+1000)</span>
+                    </li>
+
+                    <li>
+                        <strong>add highlight</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 16:00:56 (+1000)</span>
+                    </li>
+
+                    <li>
+                        <strong>prepare sound loop and set speed when drag ends</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 21:55:41 (+1000)</span>
+                    </li>
+
+                    <li>
+                        <strong>dot css</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 21:59:08 (+1000)</span>
+                    </li>
+
+                    <li>
+                        <strong>debugging</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 22:06:44 (+1000)</span>
+                    </li>
+
+                    <li>
+                        <strong>dot css</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 23:04:55 (+1000)</span>
+                    </li>
+
+                    <li>
+                        <strong>I found out I me mix up a3 and b3</strong>
+                        <span class="commit-meta">4143118 · 29 Sep 2026, 23:07:20 (+1000)</span>
+                    </li>
+
+                    <li>
+                        <strong>Merge remote-tracking branch 'origin/b2-drag-to-set'</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 12:38:53 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>fix pencil case be dragged bug</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 14:21:53 (+0800)</span>
+                        <p>make this img can not be dragged in browser</p>
+                    </li>
+
+                    <li>
+                        <strong>refactor: move static images from JS to HTML</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 14:29:30 (+0800)</span>
+                        <p>use html to manage them</p>
+                    </li>
+
+                    <li>
+                        <strong>give eraser visual feedback same as pencil when hover on it</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 14:34:04 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>start music playback when first pencil is placed</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 15:06:17 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>add pause and play button</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 15:39:10 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>adjust the pause and play icon</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 15:53:00 (+0800)</span>
+                        <p>make them in the exactly centre</p>
+                    </li>
+
+                    <li>
+                        <strong>highlight current grid</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 16:16:45 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>fix the sound and picture are out of sync after replaying bug</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 16:20:43 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>change intro dialogue text</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 16:39:48 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>add turtle and rabbit icons as a represent of different speeds</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 17:07:19 (+0800)</span>
+                        <p>and also adjust speed control's position a little</p>
+                    </li>
+
+                    <li>
+                        <strong>opening dialogue decoration</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 17:29:59 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>style: add responsive sizing for pencil case and ruler</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 20:26:44 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>decoration</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 21:01:31 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>adjust medium size's media query</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 21:43:07 (+0800)</span>
+                        <p>test in the FireFox and Chrome, than change some value to make it more suitable</p>
+                    </li>
+
+                    <li>
+                        <strong>adjustment for expanded size</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 21:54:51 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>adjustment for extra-large size</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 22:04:08 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>add voice encouragement</strong>
+                        <span class="commit-meta">4143118 · 26 Oct 2026, 23:30:05 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>debug: The issue of image display size in large sizes has been resolved</strong>
+                        <span class="commit-meta">4143118 · 27 Oct 2026, 00:05:04 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>add some comments</strong>
+                        <span class="commit-meta">4143118 · 27 Oct 2026, 00:07:56 (+0800)</span>
+                    </li>
+
+                    <li>
+                        <strong>debug:prevent ruler adjustment from restarting paused music</strong>
+                        <span class="commit-meta">4143118 · 27 Oct 2026, 00:19:35 (+0800)</span>
+                        <p>Updated the ruler's mouseup handler to preserve the current playback state</p>
+                    </li>
+                </ul>
+            </details>
+
         </main>
 
         <!-- this is an empty element which helps with spacing -->
